@@ -13,9 +13,9 @@ EXPOSE 5000
 
 USER 1001
 
-# ENTRYPOINT ["/usr/bin/python"]
-# CMD ["/opt/simple_app.py"]
+ENTRYPOINT ["/usr/bin/python"]
+CMD ["/opt/simple_app.py"]
 
 ## For debug
-ENTRYPOINT ["/bin/bash"]
-CMD ["-c", "/bin/sleep 3600"]
+# ENTRYPOINT ["/bin/bash"]
+# CMD ["-c", "/bin/sleep 3600"]
