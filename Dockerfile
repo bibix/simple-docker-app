@@ -6,7 +6,7 @@ COPY ./simple_app.py /opt/simple_app.py
 
 RUN useradd -u 1001 -r -g 0 -d ${HOME} -s /sbin/nologin \
       -c "Default Application User" default
-RUN echo "root:x:1000030000:0:root:/root:/bin/bash" >> /etc/passwd
+RUN echo "root:x:1000050000:0:root:/root:/bin/bash" >> /etc/passwd
 RUN chmod 777 /opt/simple_app.py
 
 EXPOSE 5000
