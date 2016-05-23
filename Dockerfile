@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -y vim ca-certificates python-setuptools &
 COPY ./simple_app.py /opt/simple_app.py
 
 RUN echo "root:x:1000030000:0:root:/root:/bin/bash" >> /etc/passwd
+RUN chmod 777 /opt/simple_app.py
 
 EXPOSE 5000
 
