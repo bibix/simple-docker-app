@@ -3,13 +3,14 @@
 from flask import Flask, request, make_response
 from datetime import datetime
 import socket
+import time
 
 app = Flask(__name__)
 
 
 @app.route("/", methods=['GET', 'POST'])
 def hello():
-
+    time.sleep(300)
     resp = make_response()
 
     # Set random cookie
